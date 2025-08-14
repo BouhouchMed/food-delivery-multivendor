@@ -29,7 +29,6 @@ import useUser from "@/lib/hooks/useUser";
 import { useSearchUI } from "@/lib/context/search/search.context";
 import useNearByRestaurantsPreview from "@/lib/hooks/useNearByRestaurantsPreview";
 
-import Logo from "@/lib/utils/assets/svg/Logo";
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -349,12 +348,18 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                 className={`flex items-center gap-2 flex-shrink-0 cursor-pointer`}
               >
                 {!isSearchFocused && (
-                  <div
-                    onClick={logoClickHandler}
-                    className="text-xl font-bold text-gray-900"
-                  >
-                    <Logo className="w-32 h-auto" fillColor="#000000" />
-                  </div>
+                    <div
+                      onClick={logoClickHandler}
+                      className=""
+                      style={{ minWidth: "200px", maxWidth: "300px" }}
+                    >
+                      <img
+                        src="/assets/images/svgs/logo.svg"
+                        alt="Logo"
+                        className="w-40 h-auto max-h-16"
+                        style={{ objectFit: "contain" }}
+                      />
+                    </div>
                 )}
                 {!isSearchFocused && (
                   <div
@@ -449,7 +454,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                 )}
                 {!authToken && !isSearchFocused ? (
                   <button
-                    className=" md:w-20 w-16 h-fit py-3 text-gray-900 md:py-3  px-3 bg-[#5AC12F] rounded text-sm lg:text-[16px] md:text-md "
+                    className=" md:w-20 w-16 h-fit py-3 text-gray-900 md:py-3  px-3 bg-[#f0b81a] rounded text-sm lg:text-[16px] md:text-md "
                     onClick={handleModalToggle}
                   >
                     <span className="text-white font-semibold  text-xs md:text-[16px]">
@@ -465,7 +470,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                   >
                     <div
                       className="h-6 w-6 md:w-8 md:h-8 rounded-full flex items-center justify-center text-white font-semibold select-none uppercase"
-                      style={{ backgroundColor: "#94e469" }}
+                      style={{ backgroundColor: "#be2626ff" }}
                     >
                       {profile?.name
                         ?.trim()
@@ -538,7 +543,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                           template(item) {
                             return (
                               <div
-                                className={`${currentLocale === "en" ? "bg-[#5AC12F]" : ""} p-2 cursor-pointer`}
+                                className={`${currentLocale === "en" ? "bg-[#f0b81a]" : ""} p-2 cursor-pointer`}
                                 onClick={() => onLocaleChange("en")}
                               >
                                 {item.label}
@@ -554,7 +559,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                           template(item) {
                             return (
                               <div
-                                className={`${currentLocale === "ar" ? "bg-[#5AC12F]" : ""} p-2 cursor-pointer`}
+                                className={`${currentLocale === "ar" ? "bg-[#f0b81a]" : ""} p-2 cursor-pointer`}
                                 onClick={() => onLocaleChange("ar")}
                               >
                                 {item.label}
@@ -570,7 +575,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                           template(item) {
                             return (
                               <div
-                                className={`${currentLocale === "fr" ? "bg-[#5AC12F]" : ""} p-2 cursor-pointer`}
+                                className={`${currentLocale === "fr" ? "bg-[#f0b81a]" : ""} p-2 cursor-pointer`}
                                 onClick={() => onLocaleChange("fr")}
                               >
                                 {item.label}
@@ -579,22 +584,6 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                           },
                           command: () => {
                             onLocaleChange("fr");
-                          },
-                        },
-                        {
-                          label: "HEBREW",
-                          template(item) {
-                            return (
-                              <div
-                                className={`${currentLocale === "hr" ? "bg-[#5AC12F]" : ""} p-2 cursor-pointer`}
-                                onClick={() => onLocaleChange("hr")}
-                              >
-                                {item.label}
-                              </div>
-                            );
-                          },
-                          command: () => {
-                            onLocaleChange("hr");
                           },
                         },
                       ]}
