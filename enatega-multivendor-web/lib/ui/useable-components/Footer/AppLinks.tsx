@@ -18,7 +18,7 @@ const AppLinks = () => {
     <div>
       <div className="text-[20px] mb-4 font-extrabold text-white">
         <Image
-                                src="/assets/images/svgs/logos.svg"
+                                src="/assets/images/svgs/logo.svg"
                                 alt="Logo"
                                 width={300}
                                 height={80}

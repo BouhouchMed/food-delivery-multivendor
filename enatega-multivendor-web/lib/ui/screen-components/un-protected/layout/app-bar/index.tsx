@@ -356,7 +356,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                       style={{ minWidth: "200px", maxWidth: "300px" }}
                     >
                        <Image
-                                src="/assets/images/svgs/logos.svg"
+                                src="/assets/images/svgs/logo.svg"
                                 alt="Logo"
                                 width={300}
                                 height={80}
