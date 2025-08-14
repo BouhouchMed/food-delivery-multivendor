@@ -2,10 +2,9 @@ import React from "react";
 import Image from "next/image";
 
 const PlayStoreLink =
-  "https://play.google.com/store/apps/details?id=com.enatega.multivendor&hl=en_IE";
+  "https://avadigit.com/";
 const AppleStoreLink =
-  "https://apps.apple.com/pk/app/enatega-multivendor/id1526488093";
-import Logo from "@/lib/utils/assets/svg/Logo";
+  "https://avadigit.com/";
 import { useTranslations } from "next-intl";
 
 const AppLinks = () => {
@@ -18,12 +17,14 @@ const AppLinks = () => {
   return (
     <div>
       <div className="text-[20px] mb-4 font-extrabold text-white">
-         <img
-                          src="/assets/images/svgs/logo.svg"
-                        alt="Logo"
-                        className="w-40 h-auto max-h-16"
-                        style={{ objectFit: "contain" }}
-                      />
+        <Image
+          src="/assets/images/svgs/logo.svg"
+          alt="Logo"
+          width={160}
+          height={64}
+          className="w-40 h-auto max-h-16"
+          style={{ objectFit: "contain" }}
+        />
       </div>
 
       <div className="flex gap-2 flex-wrap">

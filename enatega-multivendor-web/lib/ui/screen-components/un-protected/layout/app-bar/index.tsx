@@ -46,6 +46,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 // Interface
+import React from "react";
+import Image from "next/image";
 import { IAppBarProps } from "@/lib/utils/interfaces";
 import { ToastContext } from "@/lib/context/global/toast.context";
 // Methods
@@ -353,12 +355,14 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                       className=""
                       style={{ minWidth: "200px", maxWidth: "300px" }}
                     >
-                      <img
-                        src="/assets/images/svgs/logo.svg"
-                        alt="Logo"
-                        className="w-40 h-auto max-h-16"
-                        style={{ objectFit: "contain" }}
-                      />
+                       <Image
+                                src="/assets/images/svgs/logo.svg"
+                                alt="Logo"
+                                width={160}
+                                height={64}
+                                className="w-40 h-auto max-h-16"
+                                style={{ objectFit: "contain" }}
+                              />
                     </div>
                 )}
                 {!isSearchFocused && (
