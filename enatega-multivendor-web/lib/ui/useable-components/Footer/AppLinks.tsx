@@ -18,13 +18,13 @@ const AppLinks = () => {
     <div>
       <div className="text-[20px] mb-4 font-extrabold text-white">
         <Image
-          src="/assets/images/svgs/logo.svg"
-          alt="Logo"
-          width={160}
-          height={64}
-          className="w-40 h-auto max-h-16"
-          style={{ objectFit: "contain" }}
-        />
+                                src="/assets/images/svgs/logos.svg"
+                                alt="Logo"
+                                width={300}
+                                height={80}
+                                className="w-200 h-auto max-h-90"
+                                style={{ objectFit: "contain" }}
+                              />
       </div>
 
       <div className="flex gap-2 flex-wrap">

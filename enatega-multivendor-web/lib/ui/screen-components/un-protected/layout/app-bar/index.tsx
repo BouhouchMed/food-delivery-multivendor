@@ -356,11 +356,11 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                       style={{ minWidth: "200px", maxWidth: "300px" }}
                     >
                        <Image
-                                src="/assets/images/svgs/logo.svg"
+                                src="/assets/images/svgs/logos.svg"
                                 alt="Logo"
-                                width={160}
-                                height={64}
-                                className="w-40 h-auto max-h-16"
+                                width={300}
+                                height={80}
+                                className="w-200 h-auto max-h-90"
                                 style={{ objectFit: "contain" }}
                               />
                     </div>
