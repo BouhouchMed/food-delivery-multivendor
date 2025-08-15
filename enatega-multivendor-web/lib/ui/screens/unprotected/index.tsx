@@ -28,24 +28,7 @@ const Main = () => {
           <GrowBussiness />
           <MiniCards />
           <div className="grid grid-cols-1 md:grid-cols-2 my-[40px] gap-8">
-            <TinyTiles
-              image={
-                "https://images.ctfassets.net/23u853certza/6kRVPn5kxEnlkgCYUTozhL/7846cf51b410e633a8c30a021ec00bde/Restaurant.png?w=200&q=90&fm=webp"
-              }
-              heading={t('title5')}
-              buttonText={t('subText5')}
-              backColor={"#eaf7fc"}
-              link={"/restaurantInfo"}
-            />
-            <TinyTiles
-              image={
-                "https://images.ctfassets.net/23u853certza/4arD8VZQybXkPfyJXchLat/7457eac1b8137a76b50ed70c20cc03b4/Store.png?w=200&q=90&fm=webp"
-              }
-              heading={t('title6')}
-              buttonText={t('subText6')}
-              backColor="#eaf7fc"
-              link={"/restaurantInfo"}
-            />
+           
           </div>
 
           <Couriers />

@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 // components
 import EmailForm from '@/lib/ui/useable-components/RiderandRestaurantsInfos/Form';
@@ -21,6 +21,8 @@ import restaurantBanner from "@/public/assets/images/png/restaurant-banner.png";
 
 const RestInfo = () => {
   const t = useTranslations();
+  const locale = useLocale();
+  const isArabic = locale === "ar";
 
   const cards = [
     {
@@ -59,7 +61,7 @@ const RestInfo = () => {
   ];
 
   return (
-    <div className='w-screen h-auto'>
+    <div className='w-screen h-auto' style={isArabic ? { direction: "rtl", textAlign: "right" } : {}}>
       <Heading
         heading={t("reach_more_customers_and_grow_your_business_with_Enatega")}
         subHeading={t("partner_with_Enatega_to_create_more_sales")}

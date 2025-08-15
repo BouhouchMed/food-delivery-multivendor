@@ -42,9 +42,17 @@ const Start: React.FC = () => {
   };
   const t = useTranslations();
 
+  // Detect locale for RTL/LTR
+  let locale = typeof window !== 'undefined' ? (localStorage.getItem('NEXT_LOCALE') || 'en') : 'en';
+  const isRTL = locale === 'ar';
   return (
-    <div className="h-[100vh] w-full bg-cover bg-center flex items-center justify-center bg-[#d60201] relative">
-      <div className="text-center flex flex-col items-center justify-center">
+    <div
+      className="h-[100vh] w-full bg-cover bg-center flex items-center justify-center bg-[#d60201] relative"
+      dir={isRTL ? 'rtl' : 'ltr'}
+      style={{ flexDirection: isRTL ? 'row-reverse' : 'row' }}
+    >
+      <div className={`flex flex-col items-center justify-center ${isRTL ? 'text-right' : 'text-center'}`}
+      >
         <TextFlyingAnimation />
         <h1 className="text-[40px] md:text-[90px] font-extrabold text-white">
           {t('delivered_heading')}

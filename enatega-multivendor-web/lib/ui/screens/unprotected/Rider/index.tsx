@@ -1,6 +1,6 @@
 // import libraries
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 // import components
 import EmailForm from '@/lib/ui/useable-components/RiderandRestaurantsInfos/Form';
@@ -17,6 +17,8 @@ import RiderBanner from '@/public/assets/images/png/RidersBanner.webp';
 
 const Rider = () => {
   const t = useTranslations();
+  const locale = useLocale();
+  const isArabic = locale === "ar";
 
   const cards = [
     {
@@ -40,7 +42,10 @@ const Rider = () => {
   ];
 
   return (
-    <div className="w-screen h-auto">
+    <div
+      className="w-screen h-auto"
+      style={isArabic ? { direction: "rtl", textAlign: "right" } : {}}
+    >
       <Heading heading={t("enatega_rider_page_name_main_heading")} />
       <StartingImage image={RiderBanner} />
       <WhyChoose
@@ -48,7 +53,7 @@ const Rider = () => {
         subHeading={t("enatega_rider_page_name_why_subheading")}
       />
       <WhyCardsList cards={cards} />
-      <hr className="w-[30%] ml-12 border-4 border-green-400 my-12 rounded" />
+      <hr className={`w-[30%] ${isArabic ? "mr-12" : "ml-12"} border-4 border-green-400 my-12 rounded`} />
       <EmailForm
         heading={t("enatega_rider_page_name_form_heading")}
         role={t("enatega_rider_page_name_form_role")}

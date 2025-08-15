@@ -353,10 +353,10 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                     <div
                       onClick={logoClickHandler}
                       className=""
-                      style={{ minWidth: "200px", maxWidth: "300px" }}
+                      style={{ minWidth: "16px", maxWidth: "200px" }}
                     >
                        <Image
-                                src="/assets/images/svgs/logo.svg"
+                                src="/assets/images/svgs/logos.svg"
                                 alt="Logo"
                                 width={300}
                                 height={80}
@@ -686,8 +686,8 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                 onClick={onHandleAddressModelVisibility}
               >
                 <div className="flex gap-4">
-                  <LocationSvg width={22} height={22} />
-                  <p className="text-[14px] text-[#94e469]">
+                  <LocationSvg width={22} height={22} color="#cc2828ff" />
+                  <p className="text-[14px] text-[#cc2828ff]">
                     {userAddress?.deliveryAddress}
                   </p>
                   <div className="sm:flex items-center">
@@ -695,7 +695,7 @@ const AppTopbar = ({ handleModalToggle }: IAppBarProps) => {
                       icon={faChevronDown}
                       width={12}
                       hanging={12}
-                      color="#94e469"
+                      color="#cc2828ff"
                     />
                   </div>
                 </div>

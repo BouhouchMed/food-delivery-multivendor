@@ -2,11 +2,13 @@
 
 import AppLinks from "@/lib/ui/useable-components/Footer/AppLinks";
 import FooterLinks from "@/lib/ui/useable-components/Footer/FooterLinks";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 
 const AppFooter = () => {
   const t = useTranslations();
+  const locale = useLocale();
+  const isArabic = locale === "ar";
   const pathname = usePathname();
 
   const isDiscoveryPage =
@@ -28,14 +30,15 @@ const AppFooter = () => {
     links: [
       {
         label: t("Footer.enategaRider"),
-        link: "https://play.google.com/store/apps/details?id=com.enatega.multirider&hl=en",
+        link: "https://avadigit.com/",
         internal: false,
       },
       {
         label: t("Footer.enategaRestaurant"),
-        link: "https://play.google.com/store/apps/details?id=multivendor.enatega.restaurant&hl=en",
+        link: "https://avadigit.com/",
         internal: false,
       },
+      
     ],
   };
 
@@ -45,28 +48,29 @@ const AppFooter = () => {
       { label: t("Footer.aboutUs"), link: "/about", internal: true },
       { label: t("Footer.termsConditions"), link: "/terms", internal: true },
       { label: t("Footer.privacyPolicy"), link: "/privacy", internal: true },
-      { label: t("Footer.contact"), link: "https://ninjascode.com/", internal: false },
-      { label: t("Footer.developers"), link: "https://ninjascode.com/", internal: false },
+      { label: t("Footer.contact"), link: "https://avadigit.com/", internal: false },
+      { label: t("Footer.developers"), link: "https://avadigit.com/", internal: false },
+      
     ],
   };
 
   const followUs = {
     title: t("Footer.followUs"),
     links: [
-      { label: t("Footer.blog"), link: "https://ninjascode.com/blog", internal: false },
+      { label: t("Footer.blog"), link: "https://avadigit.com/", internal: false },
       {
         label: t("Footer.instagram"),
-        link: "https://www.instagram.com/ninjascodeofficial?igsh=ajFoeGxud3FqYnd3",
+        link: "",
         internal: false,
       },
       {
         label: t("Footer.facebook"),
-        link: "https://www.facebook.com/enatega/",
+        link: "https://www.facebook.com/avadigit/",
         internal: false,
       },
       {
         label: t("Footer.linkedIn"),
-        link: "https://www.linkedin.com/company/enatega/?originalSubdomain=pk",
+        link: "",
         internal: false,
       },
     ],
@@ -77,6 +81,7 @@ const AppFooter = () => {
       className={`w-full h-auto bg-[#141414] flex items-center justify-center ${
         isDiscoveryPage ? "md:pb-0 pb-20" : ""
       }`}
+      style={isArabic ? { direction: "rtl", textAlign: "right" } : {}}
     >
       <div className="mx-auto my-[30px] md:mt-[60px] md:mb-[60px] p-4 flex md:items-center md:justify-center flex-col">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 w-screen md:w-full md:px-0 px-4">

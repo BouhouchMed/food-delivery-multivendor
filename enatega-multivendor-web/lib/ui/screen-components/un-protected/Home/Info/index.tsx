@@ -2,34 +2,34 @@ import MoveableCard from "@/lib/ui/useable-components/Moveable-Card";
 import React from "react";
 import TranparentButton from "@/lib/ui/useable-components/Home-Buttons/TranparentButton";
 
-import riderImg from '@/public/assets/images/png/riderImg.webp'
-import reachNewCustomers from '@/public/assets/images/png/reachNewCustomers.jpg'
-import { useTranslations } from "next-intl";
+import riderImg from '@/public/assets/images/png/riderImg.webp';
+import reachNewCustomers from '@/public/assets/images/png/reachNewCustomers.jpg';
+import { useTranslations, useLocale } from "next-intl";
+
 const Info = () => {
-  const t = useTranslations()
+  const t = useTranslations();
+  const locale = useLocale();
+  const isArabic = locale === "ar";
+
   const CourierButton = <TranparentButton text={t("for_riders")} link={"/rider"} />;
-  const MerchantButton = <TranparentButton text={t("for_rest")} link={"/restaurantInfo"}/>;
+  const MerchantButton = <TranparentButton text={t("for_rest")} link={"/restaurantInfo"} />;
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div
+      className="grid grid-cols-1 md:grid-cols-2 gap-8"
+      style={isArabic ? { direction: "rtl", textAlign: "right" } : {}}
+    >
       <MoveableCard
         button={CourierButton}
-        image={
-          riderImg
-        }
+        image={riderImg}
         heading={t('MoveableCardHomeScreen.title1')}
-        subText={
-          t('MoveableCardHomeScreen.subText1')
-        }
+        subText={t('MoveableCardHomeScreen.subText1')}
       />
       <MoveableCard
         button={MerchantButton}
-        image={
-         reachNewCustomers
-        }
+        image={reachNewCustomers}
         heading={t('MoveableCardHomeScreen.title2')}
-        subText={
-          t('MoveableCardHomeScreen.subText2')
-        }
+        subText={t('MoveableCardHomeScreen.subText2')}
       />
     </div>
   );

@@ -3,13 +3,13 @@
   "searchCity": "ابحث عن مدينة...",
   "gifts": "هدايا.",
   "PIZZA": "بيتزا.",
-  "SearchBarPlaceholder": "ابحث في Fooddelivery",
+  "SearchBarPlaceholder": "  ابحث في فودديليفري ",
   "LoginForSavedAddresses": {
     "loginPrompt": "سجّل الدخول لعرض العناوين المحفوظة",
     "viewSavedAddresses": "عرض العناوين المحفوظة",
     "currentlocation": "الموقع الحالي"
   },
-  "MoveableCardHomeScreen": {
+  "MoveableCardHomeScreen": {   
     "title1": "كن شريك توصيل",
     "subText1": "اكسب من توصيل الطلبات للعملاء المحليين. خصّص جدولك بنفسك، وسلّم في الوقت والمكان الذي يناسبك",
     "title2": "الوصول إلى عملاء جدد",
@@ -17,7 +17,7 @@
     "title3": "للمطاعم والمتاجر",
     "subText3": "دعنا ننمو عملك معًا"
   },
-  "MiniCardsHomeScreen": {
+  "MiniCardsHomeScreen": {          
     "title1": "عزّز مبيعاتك",
     "subText1": "91٪ من طلبات Wolt تعتبر مبيعات إضافية لم تكن لتحصل عليها",
     "title2": "نتكفّل للأمور الثقيلة",
@@ -31,12 +31,12 @@
     "title6": "كن شريك متجر",
     "subText6": "للمتاجر"
   },
-  "InfoCardHomeScreen": {
+  "InfoCardHomeScreen": { 
   "tagLine": "الحياة ألذ مع fooddelivery",
     "subHeading": "كل شيء تقريبًا يوصل إليك – بسرعة، بموثوقية وبأسعار مناسبة",
     "Title1": "دعم حقيقي من أشخاص حقيقيين",
     "SubText1": "فريق الدعم العالمي لدينا مستعد لمساعدتك بسرعة وبأسلوب ودود",
-  "Title2": "رسوم توصيل 0€ مع fooddelivery",
+  "Title2": "رسوم توصيل 0درهم مع fooddelivery",
     "SubText2": "استمتع بالتوصيل المجاني من أفضل المطاعم والمتاجر في مدينتك"
   },
   "Apps": {
@@ -47,7 +47,7 @@
     "heading3": "يصل السائقون بسرعة",
   "subHeading3": "انتقل إلى تطبيق fooddelivery للسائقين"
   },
-  "RidersInfoCards": {
+  "RidersInfoCards": {     
     "heading1": "للسائقين",
     "subHeading1": "اكسب أينما ومتى شئت",
     "heading2": "أرباح تنافسية",
@@ -72,7 +72,7 @@
     "termsConditions": "الشروط والأحكام",
     "privacyPolicy": "سياسة الخصوصية",
     "contact": "اتصل بنا",
-    "developers": "المطورون",
+    "developers": "(أفاديجيت)المطورون",
     "followUs": "تابعنا",
     "blog": "المدونة",
     "instagram": "إنستغرام",
@@ -474,7 +474,7 @@
   "clear_history_btn": "مسح السجل",
   "restaurant_and_stores_title": "مطاعم ومتاجر",
   "show_items_btn": "عرض العناصر",
-  "search_in_Enatega_placeholder": "ابحث في fooddelivery",
+  "search_in_Enatega_placeholder": " ابحث في فودديليفري",
   "delivery_label": "توصيل",
   "pickup_label": "استلام",
   "for_greater_hunger_title": "لجوع أكبر",
@@ -521,7 +521,7 @@
   "how_Enatega_works_desc": "يتصفح العميل تطبيق fooddelivery ويقدم طلبًا من متجرك. يظهر الطلب في تطبيق التاجر لتقوم بإكماله. بمجرد تعبئته وجاهزيته، سيصل شريك التوصيل لاستلام الطلب وتسليمه للعميل. في المجمل، يستغرق الأمر حوالي 30 دقيقة حتى يتلقى العميل طلبه ويستمتع به.",
   "world_class_customer_support": "دعم عملاء عالمي المستوى لنجاحك",
   "world_class_customer_support_desc": "دعم العملاء لدينا متوفر على مدار الساعة وطوال أيام الأسبوع ويرد بلغتك المحلية خلال دقائق. نحن متاحون لك ولعملائك حتى يتم تسليم آخر طلب في اليوم.",
-  "reach_more_customers_and_grow_your_business_with_Enatega": "وصل إلى المزيد من العملاء ونمِّ عملك مع fooddelivery",
+  "reach_more_customers_and_grow_your_business_with_Enatega": "وسع قاعدة عملائك ونمِّ عملك مع fooddelivery",
   "partner_with_Enatega_to_create_more_sales": "شارك مع fooddelivery لزيادة مبيعاتك على التطبيق ومن خلال موقعك الإلكتروني الخاص",
   "why_deliver_with_Enatega": "لماذا التوصيل مع fooddelivery",
   "rider_partner_earn_money_flexible_schedule": "كشريك توصيل مع fooddelivery، يمكنك كسب المال من خلال توصيل الطلبات للعملاء المحليين. يمكنك تحديد جدولك الزمني بنفسك، بحيث تقوم بالتوصيل في الوقت والمكان الذي يناسبك أكثر. من السهل البدء في الكسب - لا يشترط وجود خبرة سابقة في التوصيل!",
