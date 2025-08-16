@@ -10,13 +10,10 @@ import Info from "../../screen-components/un-protected/Home/Info";
 import EnategaInfo from "../../screen-components/un-protected/Home/LifeWithEnatega";
 import GrowBussiness from "../../screen-components/un-protected/Home/GrowBussiness";
 import MiniCards from "../../screen-components/un-protected/Home/MiniCards";
-import TinyTiles from "../../useable-components/tinyTiles";
 import Couriers from "../../screen-components/un-protected/Home/ForCouriers";
 import { PaddingContainer } from "../../useable-components/containers";
-import { useTranslations } from "next-intl";
-
 const Main = () => {  
-  const t = useTranslations("MiniCardsHomeScreen");
+  
   return (
     <div className="w-screen">
       <Start />
